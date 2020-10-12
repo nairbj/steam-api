@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  background-color: #1d4057;
+  font-family: Verdana;
+}
+
+header {
+  background-color: #171a21;
+  color: white;
+}
+
+.page {}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  margin-top: 5px;
+  text-align: center;
+  background-color: #171a21;
+  color: white;
+}
+
+/* Mobile */
+@media only screen and (max-width: 400px) {
+  .page {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 401px) {
+  .page {
+    position: absolute;
+    left: 25px;
+    width: 401px;
+    margin: 0 auto;
+  }
+}
