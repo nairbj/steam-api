@@ -33,15 +33,69 @@ footer {
   color: white;
 }
 
+#box-button {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#list-button {
+  background-color: #171a21;
+  border: none;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  cursor: pointer;
+  border-radius: 15px;
+
+}
+
 #search-box {
   margin-top: 10px;
 }
+
+#ghibli-list {
+  width: 100%;
+  border: 6px #171a21;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 59px;
+  border-style: double;
+  border-radius: 15px;
+}
+
+#ghibli-list-results .movie {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: #1f4e6d;
+  border-radius: 15px;
+}
+
+#ghibli-list-results .movie p {
+  margin-left: 7px;;
+}
+
+#ghibli-list-results .movie ul {
+  padding-left: 10px;
+  list-style-type: none;
+  font-size: .80em;
+}
+
+
 
 /* Mobile */
 @media only screen and (max-width: 400px) {
   .page {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .web-title {
+    text-align: center;
   }
 }
 
@@ -52,5 +106,9 @@ footer {
     left: 25px;
     width: 401px;
     margin: 0 auto;
+  }
+
+  .web-title {
+    margin-left: 25px;
   }
 }

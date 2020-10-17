@@ -1,4 +1,4 @@
-document.getElementById("movieform").addEventListener("submit", function(event) {
+/*document.getElementById("movieform").addEventListener("submit", function(event) {
   event.preventDefault();
   myURL = "https://ghibliapi.herokuapp.com/films/"
   var id = document.getElementById("movie").value;
@@ -15,9 +15,10 @@ document.getElementById("movieform").addEventListener("submit", function(event) 
         "<strong>ID= " + json["id"] + "</strong>";
     });
 });
+*/
 
 // Get list of movies
-document.getElementById("ghibli-list").addEventListener("click", function(event) {
+document.getElementById("box-button").addEventListener("click", function(event) {
   event.preventDefault();
   myURL = "https://ghibliapi.herokuapp.com/films/"
   console.log(myURL);
@@ -25,7 +26,15 @@ document.getElementById("ghibli-list").addEventListener("click", function(event)
   fetch(myURL)
     .then(function(response) {
       return response.json();
-    }).then(function(json) {
+    }).then(function(json) { // Write out movie names and lists
       console.log(json);
+      var moviesOutput = "";
+      for (var i = 0; i < json.length; i++) {
+        moviesOutput += "<div class='movie'>\n<p>Movie: " + json[i]["title"] + " (" + json[i]["release_date"] + ")</p>\n"
+        moviesOutput += "<ul><li>Director: " + json[i]["director"]+ "</li></ul></div>\n"
+      }
+      console.log(moviesOutput)
+      document.getElementById("ghibli-empty-list").id = "ghibli-list";
+      document.getElementById("ghibli-list-results").innerHTML = moviesOutput;
     });
 });
