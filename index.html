@@ -4,19 +4,29 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-  <title>Steam API</title>
+  <title>Ghibli API</title>
   <link rel="stylesheet" href="styles.css" </head>
 
 <body>
 
   <header>
-    <div class="web-title">Steam API</div>
+    <div class="web-title">Ghibli API</div>
   </header>
 
   <div class="page">
-    <div class="steam-api">
-    </di>
-    <div class="picutre">
+    <div id="ghibli-list">
+      <button type="button">Movie List</button>
+    </div>
+    <div id="search-box">
+      <form id="movieform">
+        <input id="movie">
+        <input type="submit" value="Search">
+      </form>
+    </div>
+    <div id="movie-results">
+    </div>
+
+    <div class="picture">
     </div>
   </div>
 
@@ -26,12 +36,8 @@
     </p>
   </footer>
 
-
-<!--
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
-  <script text="type/javascript" src="script.js">
-  </script>
--->
+  <script>const url = "https://ghibliapi.herokuapp.com"</script>
+  <script text="type/javascript" src="script.js"></script>
 
 </body>
 
