@@ -18,7 +18,7 @@
 */
 
 // Get list of movies
-document.getElementById("box-button").addEventListener("click", function(event) {
+document.getElementById("list-button").addEventListener("click", function(event) {
   event.preventDefault();
   myURL = "https://ghibliapi.herokuapp.com/films/"
   console.log(myURL);
